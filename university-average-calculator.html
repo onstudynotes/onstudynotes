@@ -1,0 +1,99 @@
+
+<HTML>
+<HEAD>
+<TITLE>Average Calculator</TITLE>
+
+<style type="text/css">
+
+h1
+{
+color:orange;
+text-align:center;
+}
+p
+{
+font-family:"Helvetica";
+font-size:16px;
+}
+</style>
+
+<SCRIPT LANGUAGE="JavaScript">
+function testResults (form) {
+	
+	var participationmark = parseInt(form.participationmark.value);
+	var participationweight = parseInt(form.participationweight.value);
+	
+	var assignmentmark = parseInt(form.assignmentmark.value);
+	var assignmentweight = parseInt(form.assignmentweight.value);
+	
+	var midtermmark = parseInt(form.midtermmark.value);
+	var midtermweight = parseInt(form.midtermweight.value);
+	
+	var othermark = parseInt(form.othermark.value);
+	var otherweight = parseInt(form.otherweight.value);
+	
+	var exammark = parseInt(form.exammark.value);
+	var examweight = parseInt(form.examweight.value);
+	
+	var weightstotal = examweight+otherweight+midtermweight+assignmentweight+participationweight;
+	
+	var finalmark = (participationmark*(participationweight/100)) +
+					(assignmentmark*(assignmentweight/100)) +
+					(midtermmark*(midtermweight/100)) +
+					(othermark*(otherweight/100)) +
+					(exammark*(examweight/100))
+	
+	if (weightstotal > 100) {
+		alert ("The weights are over 100, please try again");
+	} else if (weightstotal < 100) {
+		alert ("The weights are less than 100, please try again");
+	} else if (finalmark > 100) {
+		alert ("There is an error in your weight/marks, please try again");
+	} else if (isNan(finalmark)) {
+		alert ("Error in your weights/marks, please try again");
+	} else if (finalmark == 100) {
+		alert ("Your final mark will be: 100%. You are a GENIUS!")
+	} else {
+    	alert ("Your final mark will be: " + (Math.round(finalmark * 100) / 100)) + "%";
+	}
+		
+}
+</SCRIPT>
+</HEAD>
+<BODY>
+<FORM NAME="myform" ACTION="" METHOD="GET">
+  <p>Assignments Mark:
+  <INPUT NAME="assignmentmark" TYPE="text" VALUE="" size="6" maxlength="3">
+  %</p>
+  <p>Assignment Weight:
+  <INPUT NAME="assignmentweight" TYPE="text" VALUE="" size="6" maxlength="3">
+  %</p><BR>
+    <p>Participation Mark:
+  <INPUT NAME="participationmark" TYPE="text" VALUE="" size="6" maxlength="3">
+  %</p>
+      <p>Participation weight:
+  <INPUT NAME="participationweight" TYPE="text" VALUE="" size="6" maxlength="3">
+  %</p><BR>
+      <p>Midterm Mark:
+  <INPUT NAME="midtermmark" TYPE="text" VALUE="" size="6" maxlength="3">
+  %</p>
+      <p>Midterm weight:
+  <INPUT NAME="midtermweight" TYPE="text" VALUE="" size="6" maxlength="3">
+  %</p><BR>
+      <p>Spare mark (ie Side Assignments, 2nd midterm):
+  <INPUT NAME="othermark" TYPE="text" VALUE=0 size="6" maxlength="3">
+  %</p>
+      <p>Spare weight:
+  <INPUT NAME="otherweight" TYPE="text" VALUE=0 size="6" maxlength="3">
+  %</p><BR>
+      <p>Final exam mark:
+  <INPUT NAME="exammark" TYPE="text" VALUE="" size="6" maxlength="3">
+  %</p>
+      <p>Final exam weight:
+  <INPUT NAME="examweight" TYPE="text" VALUE="" size="6" maxlength="3">
+  %</p><BR>
+  <P>
+<INPUT TYPE="button" NAME="button" Value="Check" onClick="testResults(this.form)">
+</FORM>
+</BODY>
+</HTML>

@@ -1,0 +1,51 @@
+<HTML>
+<HEAD>
+<TITLE>Average Calculator</TITLE>
+
+<style type="text/css">
+
+h1
+{
+color:orange;
+text-align:center;
+}
+p
+{
+font-family:"Helvetica";
+font-size:16px;
+}
+</style>
+
+<SCRIPT LANGUAGE="JavaScript">
+function testResults (form) {
+    var currentMark = parseInt(form.inputbox.value);
+	var examWorthPercentage = parseInt(form.inputbox2.value);
+	var finalMark = parseInt(form.inputbox3.value);
+	var currentWorth = 100-examWorthPercentage;
+	var exammark = (finalMark - (currentMark*(currentWorth/100)))
+						   /(examWorthPercentage/100);
+	if (exammark > 100) {
+		alert("You need an exam mark higher than 100%");
+	} else {
+		alert("You need an exam mark of " + (Math.round(exammark*100)/100) + 
+			"% to get a " + (Math.round(finalMark*100)/100) + "% final");
+	}
+}
+</SCRIPT>
+</HEAD>
+<BODY>
+<FORM NAME="myform" ACTION="" METHOD="GET">
+  <p>Enter your current mark: (ie 99%)<BR>
+  <INPUT NAME="inputbox" TYPE="text" VALUE="" size="6" maxlength="3">
+  %</p>
+  <p>Enter how much your exam is worth: (ie 30%)<BR>
+    <INPUT NAME="inputbox2" TYPE="text" VALUE="" size="6" maxlength="3">
+  %</p>
+  <p>Enter the final grade you <b>want</b> to get: (ie 75%)<BR>
+    <INPUT NAME="inputbox3" TYPE="text" VALUE="" size="6" maxlength="3">
+%</p>
+  <P>
+<INPUT TYPE="button" NAME="button" Value="Check" onClick="testResults(this.form)">
+</FORM>
+</BODY>
+</HTML>

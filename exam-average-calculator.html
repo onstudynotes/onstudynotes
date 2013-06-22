@@ -1,0 +1,47 @@
+
+<HTML>
+<HEAD>
+<TITLE>Average Calculator</TITLE>
+
+<style type="text/css">
+
+h1
+{
+color:orange;
+text-align:center;
+}
+p
+{
+font-family:"Helvetica";
+font-size:16px;
+}
+</style>
+
+<SCRIPT LANGUAGE="JavaScript">
+function testResults (form) {
+    var currentMark = form.inputbox.value;
+	var examWorthPercentage = form.inputbox2.value;
+	var examMark = form.inputbox3.value;
+	var currentWorth = 100-examWorthPercentage;
+	var finalMark = currentMark*(currentWorth/100) + examMark*(examWorthPercentage/100)
+	
+    alert ("Your final mark will be: " + (Math.round(finalMark/100)*100) + "%");
+}
+</SCRIPT>
+</HEAD>
+<BODY>
+<FORM NAME="myform" ACTION="" METHOD="GET">
+  <p>Enter your current mark: (ie 99%)<BR>
+  <INPUT NAME="inputbox" TYPE="text" VALUE="" size="6" maxlength="3">
+  %</p>
+  <p>Enter how much your exam is worth: (ie 30%)<BR>
+    <INPUT NAME="inputbox2" TYPE="text" VALUE="" size="6" maxlength="3">
+  %</p>
+  <p>Enter how much you expect to get on your exam: (ie 75%)<BR>
+    <INPUT NAME="inputbox3" TYPE="text" VALUE="" size="6" maxlength="3">
+%</p>
+  <P>
+<INPUT TYPE="button" NAME="button" Value="Check" onClick="testResults(this.form)">
+</FORM>
+</BODY>
+</HTML>
