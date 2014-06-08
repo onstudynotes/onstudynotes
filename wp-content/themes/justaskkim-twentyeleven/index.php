@@ -61,8 +61,8 @@
         height:590px}
       .start3colour{
       	background-color:#c56db7
-      }
-      
+      	}
+      	
     </style>
   </head>
   <body class="page page-id-959 page-template-default singular two-column right-sidebar">
@@ -198,30 +198,25 @@
     
   </table>
   <center>
-    <table width=912px height=100px cellspacing=0px align="center">
-      <tr width=912px class="start3colour" height=10px cellspacing=0px>
-        <td height=5px cellspacing=0px>
-        </td>
-        
-      </tr>
-      
-      
-      <tr width=912px class="start3colour" height=100px cellspacing=0px>
-        <td height=100px cellspacing=0px>
+  <table width=912px height=100px cellspacing=0px align="center">
+  	<tr width=912px class="start3colour" height=10px cellspacing=0px>
+          <td height=5px cellspacing=0px>
+          </td> </tr>
+  
+  
+    <tr width=912px class="start3colour" height=100px cellspacing=0px>
+          <td height=100px cellspacing=0px>
           
-            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- Homepage Wide -->
-<ins class="adsbygoogle"
-     style="display:inline-block;width:728px;height:90px"
-     data-ad-client="ca-pub-3488039325839512"
-     data-ad-slot="3657324983"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-      </td>
+          <a href="https://itunes.apple.com/ca/app/onstudynotes/id789775061">
+          <img src="https://farm4.staticflickr.com/3887/14376520224_d9f397a56b_o_d.png" height="100%" width="90%">
+		  </a>
+		
+
+
+	</td>
 	</tr>
-    </table>
-  </center>
+  </table>
+</center>
 </footer>
 </div>
 </body>
